@@ -111,6 +111,22 @@ Neural synthesis
 
 <br/>
 
+### Song Breakdown & Harmonics-Noise Deep Dive
+
+1. Analyzing the pitch & loudness trends
+
+<p align="center">
+  <img src="https://github.com/Utkarsh-Jha-MSAIB/data-science-for-audio-augmentation/blob/main/output_sample/viz1.png" width="1050"/>
+</p> 
+
+2. Isolating the contrbution of top 6 harmonics
+
+<p align="center">
+  <img src="https://github.com/Utkarsh-Jha-MSAIB/data-science-for-audio-augmentation/blob/main/output_sample/viz2.png" width="1050"/>
+</p>
+
+<br/>
+
 ### Future Directions
 
 - **Scope for Continuous Improvement** Music is inherently subjective, and this pipeline leverages that flexibility. By learning patterns from high-quality audio and adapting them to pattern-driven generation, the system enables iterative refinement. This allows for multiple cycles of listening, tuning, and enhancement, ensuring there is always room for improvement.
