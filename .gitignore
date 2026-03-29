@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual env
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data (optional - if large)
+data/raw/
+data/interim/
+
+# Outputs
+data/outputs/
+output/
+
+# Checkpoints (if large)
+checkpoints/
+
+# Logs
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
