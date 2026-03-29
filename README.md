@@ -5,7 +5,7 @@
 What if patterns we see around us could be transformed into music?
 
 <p align="center">
-  <img src="https://github.com/Utkarsh-Jha-MSAIB/data-science-for-audio-augmentation/blob/main/output_sample/viz0.png" width="750"/>
+  <img src="https://github.com/Utkarsh-Jha-MSAIB/data-science-for-audio-augmentation/blob/main/output_sample/viz0.png" width="1050"/>
 </p> 
 
 ## Contents
