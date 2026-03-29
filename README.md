@@ -1,138 +1,169 @@
 # Data Science for Audio Augmentation
 
-**Ever wondered how the New York skyline could sound? 🏙️**
+**What if visual patterns could be converted into structured, controllable music?**
 
-What if patterns we see around us could be transformed into music?
+This project explores a **data science approach to audio generation**, where images (such as skylines) are transformed into **interpretable musical signals** instead of relying purely on learned models.
 
 <p align="center">
   <img src="https://github.com/Utkarsh-Jha-MSAIB/data-science-for-audio-augmentation/blob/main/output_sample/viz0.png" width="1050"/>
-</p> 
+</p>
 
-## Contents
+---
 
-- [Motivation](#motivation)
-- [Why Data Science (Not Just Deep Learning)?](#why-data-science-(not-just-deep-learning)?)
-- [Pipeline Overview](#pipeline-overview)
-- [Future Directions](#future-directions)
+## Key Insight
+
+Music generation does not have to depend entirely on historical datasets.
+
+By treating audio as a **structured, controllable system**, we can generate **novel, pattern-driven music** from entirely non-musical sources such as images, curves, and environmental patterns.
+
+---
+
+## What Makes This Different?
+
+- **Not end-to-end black-box learning** → fully interpretable pipeline  
+- **Explicit feature control** → pitch, loudness, timbre engineered independently  
+- **Regression-driven loudness modeling** → pitch-aware dynamic behavior  
+- **Multi-mode synthesis** → formula-based, ML-based, and audio-guided outputs  
+- **Non-musical inputs** → enables truly novel sound generation  
+
+👉 The focus is on **understanding and controlling sound**, not just generating it.
+
+---
 
 ## Motivation
 
-Data Science has true potential to create sounds never heard before.
-To do that, we must first understand how music itself can be represented:
-- Music is fundamentally a time-series signal
-- It can be decomposed into interpretable components:
-  - Pitch (melody)
-  - Loudness (dynamics)
-  - Timbre (harmonics + noise)
+Modern music AI systems (Transformers, diffusion models, etc.) are powerful, but:
 
-By isolating and controlling these components, we can move beyond imitation → toward true augmentation.
+- rely heavily on existing datasets  
+- often reproduce learned styles  
+- raise **ethical concerns** around data usage and originality  
 
-But what if we go one step further?
+This project takes a different direction:
 
-Instead of learning only from existing music,
-we reverse-engineer patterns from the world around us:
-- Skylines
-- Ocean waves
-- Natural curves
-- Abstract visual patterns
+👉 Generate **fresh, original audio** using **structured transformations** rather than imitation.
 
-…and convert them into musical structures.
-  
-<br/>
+We start by decomposing music into core components:
 
-## Why Data Science (Not Just Deep Learning)?
+- **Pitch** → melody  
+- **Loudness** → dynamics  
+- **Timbre** → harmonics + noise  
 
-Modern AI (Transformers, RNNs, diffusion models) has made:
+Then rebuild audio by controlling these components directly.
 
-- Text → Music
-- Style transfer
-- Long-range coherence possible.
+---
 
-However:
+## Core Idea
 
-⚠️ These systems are still heavily dependent on historical data
+**Visual Pattern → Time-Series → Engineered Controls → Synthesized Audio**
 
-⚠️ True novelty is limited by training distributions
-
-⚠️ Music remains a subjective domain
-
-<br/>
-
-## 💡 This is where Data Science comes in
-
-Instead of treating music as a black box, we:
-
-Decompose signals into interpretable features
-Engineer transformations explicitly
-Control each component independently
-
-This is analogous to real-world DS systems:
-
-| Domain | Components | 
-|--------|--------|
-| Marketing	| price, promotion, placement |
-| Finance	| risk, return, volatility |
-| Music (this project) |	pitch, loudness, timbre |
-
-👉 We model the system, not just the output
-
-<br/>
-
-## 🔁 Core Idea
-- Convert visual structure → time-series → controllable audio features → synthesized sound
+---
 
 ## Pipeline Overview
 
-### Step 1: Image → Curve Extraction
-- Extract a continuous curve from visual inputs (e.g., skyline)
-- Convert pixel space → normalized signal
-### Step 2: Curve → Time-Series Mapping
-- X-axis → time
-- Y-axis → signal amplitude / displacement
-### Step 3: Feature Engineering
-Transform raw curve into musical controls:
-- Pitch (Hz) → derived from displacement
-- Loudness → derived from height / energy
-- Optional:
-  - smoothing / denoising
-  - resampling
-  - scaling
-### Step 4: Pitch Postprocessing
-- Remove interpolation artifacts
-- Enforce discrete musical transitions
-- Convert continuous signals → step-like notes
-### Step 5: Audio Synthesis
-DSP-based synthesis
-Neural synthesis
-### Step 6: Reconstruction & Evaluation
-- Rebuild audio from features
-- Compare: waveform, pitch contours, perceptual quality
-- final filtering step in music generation workflows
+### 1. Image → Curve Extraction
+- Extract continuous structure from images (e.g., skyline edges)
+- Convert pixel space into normalized signal
 
-<br/>
+### 2. Curve → Time Mapping
+- X-axis → time  
+- Y-axis → displacement → musical driver  
 
-### Song Breakdown & Harmonics-Noise Deep Dive
+### 3. Feature Engineering
+- Pitch derived from curve displacement  
+- Loudness derived from height / energy  
+- smoothing, normalization, and scaling  
 
-1. Analyzing the pitch & loudness trends
+### 4. Pitch Structuring
+- Remove interpolation artifacts  
+- Enforce discrete note transitions  
+- Convert continuous signals → musical note blocks  
+
+### 5. Loudness Modeling (Regression)
+
+Instead of directly using loudness, we model it as a function of pitch:
+
+- Convert pitch → feature space (Hz or MIDI)  
+- Split into bands (low / mid / high)  
+- Fit simple linear regression per band  
+- Predict loudness from generated pitch  
+
+👉 This ensures **musically consistent dynamics**, rather than purely visual mapping.
+
+---
+
+### 6. Synthesis Modes
+
+Three parallel generation strategies:
+
+- **Formula-based** → deterministic, structured, highly interpretable  
+- **ML-based** → learned timbre, smoother and more natural  
+- **Audio-based** → preserves donor audio texture while adapting structure  
+
+---
+
+## Song Breakdown & Harmonics-Noise Deep Dive
+
+### 1. Pitch, Loudness & Amplitude
 
 <p align="center">
   <img src="https://github.com/Utkarsh-Jha-MSAIB/data-science-for-audio-augmentation/blob/main/output_sample/viz1.png" width="1050"/>
-</p> 
+</p>
 
-2. Isolating the contrbution of top 6 harmonics
+- **Pitch** → melody derived from visual structure  
+- **Loudness** → dynamics shaped by regression + height mapping  
+- **Amplitude (multi-mode)** → synthesis energy across generation modes  
+
+👉 **Why plot amplitude when loudness exists?**
+
+- Loudness = perceptual / modeled signal  
+- Amplitude = actual waveform energy used in synthesis  
+
+This distinction helps compare how different generation modes behave even under similar loudness patterns.
+
+---
+
+### 2. Harmonics Breakdown
 
 <p align="center">
   <img src="https://github.com/Utkarsh-Jha-MSAIB/data-science-for-audio-augmentation/blob/main/output_sample/viz2.png" width="1050"/>
 </p>
 
-<br/>
+- Tracks dominant harmonic components over time  
+- Shows how timbre evolves independently of pitch  
 
-### Future Directions
+👉 **Key role of harmonics:**  
+They define tone quality — brightness, richness, and instrument identity — making them critical for generating expressive and distinguishable sounds.
 
-- **Scope for Continuous Improvement** Music is inherently subjective, and this pipeline leverages that flexibility. By learning patterns from high-quality audio and adapting them to pattern-driven generation, the system enables iterative refinement. This allows for multiple cycles of listening, tuning, and enhancement, ensuring there is always room for improvement.
+---
 
-- **Ability to Utilize Diverse Patterns** While skyline structures provide a strong starting point for melodic instruments such as guitar and piano, other patterns can unlock new possibilities. For example, spherical or cyclic patterns could be mapped to rhythmic structures like drums. This opens up exciting Edge AI use cases where composers and users can discover new tunes simply by interpreting patterns they observe in the world around them.
+## Outputs
 
-- **Multi-Instrumentation Pipeline** By isolating and visualizing key components such as pitch, loudness, and timbre, the framework can be extended to support multiple instruments simultaneously. This enables the generation of richer, multi-instrument compositions, significantly expanding the scope for innovation and creation of fresh, original music.
+- Generated audio across 3 synthesis modes  
+- Frame-level pitch & loudness control signals  
+- Harmonic and amplitude visualizations  
+- Fully reconstructable audio representations  
 
-Overall, this work reinforces the idea that expressive music generation benefits from a combination of structured data science principles, modular design, and perceptual evaluation. These foundations position the system as a flexible and scalable framework for future research in novel, high-quality audio generation.
+---
+
+## Future Directions
+
+- **Iterative refinement loop**  
+  Use perceptual feedback to continuously improve generated outputs  
+
+- **Diverse pattern mapping**  
+  Extend beyond skylines to cyclic, geometric, and abstract structures  
+
+- **Multi-instrument pipeline**  
+  Generate richer compositions by combining multiple instrument layers  
+
+---
+
+## Summary
+
+This project reframes music generation as a **data science problem**:
+
+- features are interpretable  
+- transformations are controllable  
+- outputs are analyzable  
+
+Rather than imitating existing music, it enables **creation of entirely new musical forms** driven by patterns in the world around us.
