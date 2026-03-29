@@ -20,7 +20,7 @@ What if patterns we see around us could be transformed into music?
 
 ## Motivation
 
-Music generation today is largely driven by models trained on existing data.  
+AI Music generation today is largely driven by models trained on existing data.  
 While powerful, this raises two key challenges:
 
 - **Limited novelty** → outputs often resemble training data  
