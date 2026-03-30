@@ -171,6 +171,9 @@ Harmonics define **tone quality**: brightness, richness, and instrument identity
 
 - **Multi-Instrumentation Pipeline**
   By isolating and visualizing key components such as pitch, loudness, and timbre, the framework can be extended to support multiple instruments simultaneously. This enables the generation of richer, multi-instrument compositions, significantly expanding the scope for innovation and creation of fresh, original music.
+
+- **Modeling Missing Musical Components**
+  While the current pipeline focuses on pitch, loudness, and timbre, future work can incorporate additional musical components such as rhythm, articulation, and higher-level structure. Explicitly modeling these elements will enable the generation of more complete and coherent songs while preserving the interpretability and control of the system.
   
 
 Overall, this work reinforces the idea that expressive music generation benefits from a combination of structured data science principles, modular design, and perceptual evaluation. These foundations position the system as a flexible and scalable framework for future research in novel, high-quality audio generation.
