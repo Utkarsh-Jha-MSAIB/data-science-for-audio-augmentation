@@ -94,24 +94,24 @@ This is analogous to real-world DS systems:
 
 ## Pipeline Overview
 
-### Step 1: Image → Curve Extraction
+**Step 1: Image → Curve Extraction**
 - Extract skyline / pattern as a continuous curve
 
-### Step 2: Curve → Time Mapping
+**Step 2: Curve → Time Mapping**
 - X-axis → time  
 - Y-axis → displacement signal  
 
-### Step 3: Feature Engineering
+**Step 3: Feature Engineering**
 - Pitch from curve displacement  
 - Loudness from height profile  
 - Smoothing + normalization    
 
-### Step 4: Pitch Structuring
+**Step 4: Pitch Structuring**
 - Remove interpolation artifacts  
 - Enforce note-like transitions  
 - Convert continuous → discrete musical structure  
 
-### Step 5: Loudness Modeling (Regression)
+**Step 5: Loudness Modeling (Regression)**
 Instead of using loudness directly, we **learn its relationship with pitch**:
 
 - Convert pitch → feature space (Hz / MIDI)
@@ -119,7 +119,7 @@ Instead of using loudness directly, we **learn its relationship with pitch**:
 - Fit regression per band
 - Predict loudness from generated pitch
 
-### Step 6: Synthesis Modes
+**Step 6: Synthesis Modes**
 - **Formula-based** → rule-driven, structured but less expressive  
 - **ML-based** → learned timbre, smoother and more natural (model checkpoints from DL pipeline) 
 - **Audio-based** → preserves donor audio texture while adapting structure  
@@ -128,7 +128,7 @@ Instead of using loudness directly, we **learn its relationship with pitch**:
 
 ## Song Breakdown & Harmonics-Noise Deep Dive
 
-### 1. Pitch, Loudness & Amplitude
+**1. Pitch, Loudness & Amplitude**
 
 - **Pitch** → shows melody derived from visual structure  
 - **Loudness** → shows expressive dynamics after regression + shaping  
@@ -146,7 +146,7 @@ This helps compare how different generation modes behave even under similar loud
 
 ---
 
-### 2. Harmonics Breakdown
+**2. Harmonics Breakdown**
 
 - Tracks contribution of dominant harmonics over time  
 - Shows how timbre evolves even when pitch remains stable 
