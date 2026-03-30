@@ -2,7 +2,7 @@
 
 **Ever wondered how the New York skyline could sound? 🏙️**
 
-What if patterns we see around us could be transformed into music?
+What if patterns we see around us could be transformed into structured music?
 
 <p align="center">
   <img src="https://github.com/Utkarsh-Jha-MSAIB/data-science-for-audio-augmentation/blob/main/output_sample/viz0.png" width="1050"/>
@@ -20,7 +20,8 @@ What if patterns we see around us could be transformed into music?
 
 ## Motivation
 
-AI Music generation today is largely driven by models trained on existing data.  
+AI music generation today is largely driven by models trained on existing data. 
+
 While powerful, this raises two key challenges:
 
 - **Limited novelty** → outputs often resemble training data  
@@ -68,7 +69,9 @@ However:
 
 Instead of treating music as a black box, we: 
 
-Decompose signals into interpretable features Engineer transformations explicitly Control each component independently 
+- Decompose signals into interpretable features  
+- Engineer transformations explicitly  
+- Control each component independently  
 
 This is analogous to real-world DS systems:
 
@@ -101,12 +104,12 @@ This is analogous to real-world DS systems:
 ### Step 3: Feature Engineering
 - Pitch from curve displacement  
 - Loudness from height profile  
-- smoothing + normalization  
+- Smoothing + normalization    
 
 ### Step 4: Pitch Structuring
-- remove interpolation artifacts  
-- enforce note-like transitions  
-- convert continuous → discrete musical structure  
+- Remove interpolation artifacts  
+- Enforce note-like transitions  
+- Convert continuous → discrete musical structure  
 
 ### Step 5: Loudness Modeling (Regression)
 Instead of using loudness directly, we **learn its relationship with pitch**:
@@ -116,7 +119,7 @@ Instead of using loudness directly, we **learn its relationship with pitch**:
 - Fit simple linear regression per band
 - Predict loudness from generated pitch
 
-👉 This ensures loudness behaves **musically consistent with pitch**, not just visually driven.
+👉 This ensures loudness behaves **musically consistent with pitch**, rather than being purely visually driven.
 
 ### Step 6: Synthesis Modes
 - **Formula-based** → rule-driven, structured but less expressive  
@@ -141,7 +144,7 @@ Instead of using loudness directly, we **learn its relationship with pitch**:
 - Loudness = perceptual / modeled control  
 - Amplitude = actual synthesis energy  
 
-This helps compare how different generation modes behave even under similar loudness patterns.
+This helps compare how different generation modes behave even under similar loudness conditions.
 
 ---
 
@@ -156,7 +159,7 @@ This helps compare how different generation modes behave even under similar loud
  
 
 👉 Key insight:  
-Harmonics define **tone quality**: brightness, richness, and instrument identity, making them critical for generating distinguishable and expressive sounds.
+Harmonics define **tone quality**: brightness, richness, and instrument identity, making them critical for generating distinct and expressive sounds.
 
 ---
 
