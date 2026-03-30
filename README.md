@@ -43,7 +43,7 @@ By isolating and controlling these components, we can unlock new possibilities f
 Instead of learning only from existing music, we **reverse-engineer** patterns from the world around us: 
 - Skylines
 - Ocean waves
-- Natural curves\
+- Natural curves
 - Abstract visual patterns
 
 …and convert them into musical structures.
