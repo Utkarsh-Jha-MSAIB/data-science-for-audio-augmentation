@@ -35,12 +35,13 @@ Data Science has true potential to create sounds never heard before. To do that,
   - **Loudness** (dynamics)
   - **Timbre** (harmonics + noise)
 
-By isolating and controlling these components, we can move beyond imitation → toward true augmentation. 
+By isolating and controlling these components, we can unlock new possibilities for creative audio generation.
 
 **But what if we go one step further?**
 
 Instead of learning only from existing music, we reverse-engineer patterns from the world around us: 
-- Skylines - Ocean waves
+- Skylines
+- Ocean waves
 - Natural curves
 - Abstract visual patterns
 
