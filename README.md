@@ -1,6 +1,6 @@
 # Data Science for Audio Augmentation
 
-**Ever wondered how the New York skyline could sound? 🏙️**
+**Can data science help us understand what the New York skyline might sound like? 🏙️**
 
 What if patterns we see around us could be transformed into structured music?
 
