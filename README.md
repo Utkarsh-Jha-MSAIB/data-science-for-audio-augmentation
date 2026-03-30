@@ -34,7 +34,7 @@ This project explores an alternative direction:
 - It can be decomposed into interpretable components:
   - **Pitch** (melody)
   - **Loudness** (dynamics)
-  - **Timbre** (harmonics + noise) and more
+  - **Timbre** (harmonics + noise) ....and more
 
 By isolating and controlling these components, we can unlock new possibilities for creative audio generation.
 
