@@ -11,7 +11,7 @@ What if patterns we see around us could be transformed into structured music?
 ## Contents
 
 - [Motivation](#motivation)
-- [Why Data Science (Not Just Deep Learning)?](#why-data-science-not-just-deep-learning)
+- [Why Data Science Beyond Deep Learning?)?](#why-data-science-beyond-deep-learning)
 - [Pipeline Overview](#pipeline-overview)
 - [Song Breakdown & Harmonics-Noise Deep Dive](#song-breakdown--harmonics-noise-deep-dive)
 - [Future Directions](#future-directions)
@@ -50,7 +50,7 @@ Instead of learning only from existing music, we **reverse-engineer** patterns f
 
 ---
 
-## Why Data Science, Not Just Deep Learning?
+## Why Data Science Beyond Deep Learning?
 
 Modern AI (Transformers, RNNs, diffusion models) has made: 
 
