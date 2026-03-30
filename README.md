@@ -86,7 +86,7 @@ This is analogous to real-world DS systems:
 <br/>
 
 
-## Core Idea
+**Core Idea**
 
 **Convert visual structure → time-series → controllable audio features → synthesized sound**
 
