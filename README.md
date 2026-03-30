@@ -76,7 +76,7 @@ This is analogous to real-world DS systems:
 |--------|--------| 
 | Marketing | price, promotion, placement |
 | Finance | risk, return, volatility | 
-| **Music** (our goal) | **pitch, loudness, timbre** |
+| **Music (our goal)** | **pitch, loudness, timbre** |
 
 👉 We model the system, not just the output 
 
