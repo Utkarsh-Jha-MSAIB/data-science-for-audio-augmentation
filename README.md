@@ -57,12 +57,9 @@ Modern AI (Transformers, RNNs, diffusion models) has made:
 - Long-range coherence possible
 
 However:
-
-⚠️ These systems are still heavily dependent on historical data 
-
-⚠️ True novelty is limited by training distributions 
-
-⚠️ Music remains a subjective domain
+- These systems are still heavily dependent on historical data 
+- True novelty is limited by training distributions 
+- Music remains a subjective domain
 
 <br/>
 <br/>
