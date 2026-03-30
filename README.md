@@ -29,7 +29,7 @@ While powerful, this raises two key challenges:
 
 This project explores an alternative direction:
 
-Data Science has true potential to create sounds never heard before. To do that, we must first understand how music itself can be represented: 
+**Data Science** has true potential to create sounds never heard before. To do that, we must first understand how music itself can be represented: 
 - Music is fundamentally a time-series signal
 - It can be decomposed into interpretable components:
   - **Pitch** (melody)
@@ -40,10 +40,10 @@ By isolating and controlling these components, we can unlock new possibilities f
 
 **But what if we go one step further?**
 
-Instead of learning only from existing music, we reverse-engineer patterns from the world around us: 
+Instead of learning only from existing music, we **reverse-engineer** patterns from the world around us: 
 - Skylines
 - Ocean waves
-- Natural curves
+- Natural curves\
 - Abstract visual patterns
 
 …and convert them into musical structures.
@@ -61,7 +61,7 @@ Modern AI (Transformers, RNNs, diffusion models) has made:
 However:
 - These systems are still heavily dependent on historical data 
 - True novelty is limited by training distributions 
-- Music remains a subjective domain
+- Music remains a subjective domain (both strength & weakness)
 
 <br/>
 
@@ -77,7 +77,7 @@ This is analogous to real-world DS systems:
 
 | Domain | Components |
 |--------|--------| 
-| Marketing | price, promotion, placement |
+| Marketing | price, promotion, trade |
 | Finance | risk, return, volatility | 
 | **Music (our goal)** | **pitch, loudness, timbre** |
 
@@ -116,14 +116,12 @@ Instead of using loudness directly, we **learn its relationship with pitch**:
 
 - Convert pitch → feature space (Hz / MIDI)
 - Split into bands (low / mid / high)
-- Fit simple linear regression per band
+- Fit regression per band
 - Predict loudness from generated pitch
-
-👉 This ensures loudness behaves **musically consistent with pitch**, rather than being purely visually driven.
 
 ### Step 6: Synthesis Modes
 - **Formula-based** → rule-driven, structured but less expressive  
-- **ML-based** → learned timbre, smoother and more natural  
+- **ML-based** → learned timbre, smoother and more natural (model checkpoints from DL pipeline) 
 - **Audio-based** → preserves donor audio texture while adapting structure  
 
 ---
