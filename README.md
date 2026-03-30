@@ -11,7 +11,7 @@ What if patterns we see around us could be transformed into structured music?
 ## Contents
 
 - [Motivation](#motivation)
-- [Why Data Science Beyond Deep Learning?](#why-data-science-beyond-deep-learning?)
+- [Why Data Science Beyond Deep Learning?](#why-data-science-beyond-deep-learning)
 - [Pipeline Overview](#pipeline-overview)
 - [Song Breakdown & Harmonics-Noise Deep Dive](#song-breakdown--harmonics-noise-deep-dive)
 - [Future Directions](#future-directions)
